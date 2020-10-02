@@ -24,6 +24,8 @@ def p_i(d, beta):
     x = - d * beta
     y = np.exp(x)
     ysum = y.sum()
+    if ysum == 0:
+        return np.zeros_like(y) # TODO: check whether default 0 is meaningful
     return y / ysum
 
 def find_beta(d, perp, upper_bound=1e6):
