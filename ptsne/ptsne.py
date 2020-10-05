@@ -260,7 +260,7 @@ class ParametricTSNE(nn.Module):
                 loss = loss_func(p, q)
                 
                 if epoch < 10:
-                   # exaggeration tets
+                   # exaggeration test
                    loss = loss / exaggeration - np.log(exaggeration)
                 
                 loss.backward()
